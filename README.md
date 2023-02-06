@@ -13,8 +13,8 @@
 - changes reflected in _parent_ component
 
 ## Solution
-- _Parent_
-  - pass update function to _Child
+- _parent_
+  - pass update function to _child_
   ```javascript
   const UpdateItem = (name, val) =>
   {
@@ -26,10 +26,10 @@
 
         <Child item={item} updateItem={UpdateItem} />
   ```
-- _Child_
+- _child_
   - changing state via `setItem` is asynchronous
   - must use `useEffect` which is called **after** state has changed
-  - in `useEffect`, call _Parent_ update function
+  - in `useEffect`, call _parent_ update function
   ```javascript
   useEffect(() => {
     props.updateItem("width", item.width);
