@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Child from "./Child";
 
 function App() {
-  const [item, setItem] = useState({ width: 20, isEnabled: true });
+  const [item, setItem] = useState({ width: 20, isEnabled: true, car:"saab" });
 
   const UpdateItem = (name, val) =>
   {
@@ -26,6 +26,8 @@ function App() {
         <label>Parent width  : {item.width}</label>
         <p/>
         <label>Parent enabled: {item.isEnabled.toString()}</label>
+        <p/>
+        <label>Parent car: {item.car}</label>
       </div>
     </>
   );

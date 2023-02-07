@@ -46,6 +46,12 @@ function Child(props) {
     props.updateItem("isEnabled", item.isEnabled);
   }, [item.isEnabled]);
 
+  useEffect(() => {
+    console.log(`Child useEffect (car): ${JSON.stringify(item)}`);
+
+    props.updateItem("car", item.car);
+  }, [item.car]);
+
   return (
     <>
       <label htmlFor="width">Width (between 1 and 50):</label>
@@ -53,6 +59,15 @@ function Child(props) {
       <p />
       <label htmlFor="isEnabled">Enabled:</label>
       <input type="checkbox" id="isEnabled" name="isEnabled" checked={item.isEnabled} onChange={OnChangeChecked}></input>
+      <p />
+      <label htmlFor="cars">Car:</label>
+      <select id="car" name="car" value={item.car} onChange={OnChangeValue}>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="holden">Holden</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>{" "}
     </>
   );
 }

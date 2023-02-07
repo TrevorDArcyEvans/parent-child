@@ -52,7 +52,7 @@
 - convert to Typescript
 - test with other input types
   - radio button group
-  - select aka dropdown list
+  - ~~select aka dropdown list~~
 
 ## Prerequisites
 - nodejs
